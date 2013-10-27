@@ -29,7 +29,7 @@
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:inputType="numberDecimal"
-		    android:hint="@string/carbs"	>
+		    android:hint="@string/carbs">
 		</EditText>
 		
 		<EditText
@@ -37,7 +37,7 @@
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:inputType="numberDecimal"
-		    android:hint="@string/protein"	>
+		    android:hint="@string/protein">
 		</EditText>
     
 		<EditText
@@ -61,7 +61,9 @@
             android:id="@+id/pointsplusvalue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pointsplusvalue" >
+            android:text="@string/pointsplusvalue" 
+            android:textColor="#3D00F5"
+            android:textSize="45sp">
             </TextView>	    
 
 </LinearLayout>

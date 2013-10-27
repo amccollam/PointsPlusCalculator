@@ -53,16 +53,35 @@ public class MainActivity extends Activity {
     
     
     public void calculate(View view) {
-    	Double fatnum = Double.parseDouble(
-    	        fat.getText().toString());
-    	Double carbsnum = Double.parseDouble(
-    	        carbs.getText().toString());
-    	Double proteinnum = Double.parseDouble(
-    	        protein.getText().toString());
-    	Double fibernum = Double.parseDouble(
-    	        fiber.getText().toString());
+    	Double fatnum, carbsnum, proteinnum, fibernum;
+    	//Passing empty string "" into Double.valueOf causes NumberFormatException/crash.       	
+    	try {
+    		fatnum = Double.valueOf(fat.getText().toString());
+    	}
+    	catch (NumberFormatException e) {
+    		fatnum = 0.0;
+    	}
+    	try {
+    		carbsnum = Double.valueOf(carbs.getText().toString());
+    	}
+    	catch (NumberFormatException e) {
+    		carbsnum = 0.0;
+    	}
+    	try {
+    		proteinnum = Double.valueOf(protein.getText().toString());
+    	}
+    	catch (NumberFormatException e) {
+    		proteinnum = 0.0;
+    	}
+    	try {
+    		fibernum = Double.valueOf(fiber.getText().toString());
+    	}
+    	catch (NumberFormatException e) {
+    		fibernum = 0.0;
+    	}
 
     	Double pointsvalue = ((fatnum * 0.25714)+(carbsnum * 0.108571)+(proteinnum * 0.091428)-(fibernum * 0.08));
     	pointsplusvalue.setText(pointsvalue.toString());
+    	
     }
 }
